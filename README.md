@@ -47,10 +47,10 @@ npx sequelize-cli db:seed:all
 3. Obs.: A aplicação front roda na porta 3000 e faz a requisção para o back-end que está na porta 3001. Ao executar verifique se alguma dessas portas não estão sendo usadadas por outros serviços.
 
 ### Instruções Para o App
-1. Após clonar o repositório execute o comando `ya install` para instalar as dependências necessárias.
+1. Após clonar o repositório execute o comando `yarn install` para instalar as dependências necessárias.
 2. Verifique se o servidor Back-End está online e execute o comando `yarn start` para iniciar a aplicação
 
 
 #### Obs1: Não sei se é devido a minha rede, mas o react-native quando rodado com o NPM acaba corrompendo pacotes, então se possivel procure utilizar o Yarn
 
-#### Obs2: NO ReactNative o Axios não conseguia fazer a requisição acusando CONNECTION REFUSED, quando o arquivo AxiosRequest que está no diretório ./mobile/src/utils/axiosRequest.js estava configurado para o end point http://localhost:3001 foi preciso colocar o IP diretamente, ficando assim... http://SEUIP:3001.
+#### Obs2: No ReactNative o Axios não conseguia fazer a requisição acusando CONNECTION REFUSED, quando o arquivo AxiosRequest que está no diretório ./mobile/src/utils/axiosRequest.js estava configurado para o end point http://localhost:3001 foi preciso colocar o IP diretamente, ficando assim... http://SEUIP:3001.
