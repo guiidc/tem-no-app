@@ -31,10 +31,19 @@ async function deleteProduct(req, res) {
   }
   return res.status(200).json(deletedProduct);
 }
+async function getProductById(req, res) {
+  const { id } = req.params;
+  const product = await productService.getProductById(id);
+  if (product.error) {
+    return res.status(product.code).json({ message: product.error });
+  }
+  return res.status(200).json(product);
+}
 
 module.exports = {
   getProducts,
   createProduct,
   updateProduct,
   deleteProduct,
+  getProductById,
 };

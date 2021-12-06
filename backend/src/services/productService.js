@@ -49,10 +49,19 @@ async function deleteProduct(id) {
   const deletedProduct = await Products.destroy({ where: { id } });
   return deletedProduct;
 }
+async function getProductById(id) {
+  const product = await Products.findOne({ where: { id } });
+  if (!product) {
+    return { code: 404, error: 'Product not found' };
+  }
+
+  return product;
+}
 
 module.exports = {
   getProducts,
   createProduct,
   updateProduct,
   deleteProduct,
+  getProductById,
 };
