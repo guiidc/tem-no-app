@@ -53,4 +53,4 @@ npx sequelize-cli db:seed:all
 
 #### Obs1: Não sei se é devido a minha rede, mas o react-native quando rodado com o NPM acaba corrompendo pacotes, então se possivel procure utilizar o Yarn
 
-#### Obs2: NO ReactNative o Axios não conseguia fazer a requisição acusando CONNECTION REFUSED, quando o arquivo AxiosRequest que está no diretório src/axiosRequest.js estava configurado para o end point http://localhost:3001 foi preciso colocar o IP diretamente, ficando assim... http://SEUIP:3001.
+#### Obs2: NO ReactNative o Axios não conseguia fazer a requisição acusando CONNECTION REFUSED, quando o arquivo AxiosRequest que está no diretório ./mobile/src/utils/axiosRequest.js estava configurado para o end point http://localhost:3001 foi preciso colocar o IP diretamente, ficando assim... http://SEUIP:3001.
